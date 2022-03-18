@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show one sku{% endblock %}
+
+{% block body %}
+  <h2 style="width: 10%;margin: 50px 0px 0px 80px;" class="text-center d-block p-2 bg-dark text-white"> Sku {{data.Sku}} </h2>
+
+  <table style="width: 25%;" class="table table-striped table-hover m-5 border border-dark border border-3">
+    {% for property, value in data %}
+      <tr>
+        <th style="padding-left: 30px;width: 40%;">{{property}}</th>
+        <td>{{value}}</td>
+      </tr>
+    {% endfor %}
+  </table>
+  
+  <table style="width: 30%; margin-left: 80px">
+    <td>
+      <a class="btn btn-primary" href="{{ path('get_all_sku') }}" role="button">Back</a>
+    </td>
+    <td>
+      <a class="btn btn-secondary" href="{{ path('edit_sku', {'sku': data.Sku} )}}" role="button">
+        Edit
+      </a>
+    </td>
+    <td>
+      {% include 'deleteModal.html.twig' %}
+    </td>
+  </table>
+{% endblock %}

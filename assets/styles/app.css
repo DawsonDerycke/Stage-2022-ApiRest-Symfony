@@ -1,0 +1,10 @@
+ul{
+    color: #dc143c;
+    position: absolute;
+    font-size: small;
+    margin: -5px 0 0 140px;
+}
+
+li {
+    display: inline;
+}
