@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/mssql-tools as mssql
 # php-fpm
-FROM php:7.4-fpm-alpine
+FROM php:8.0-fpm-alpine
 
 CMD ["php-fpm"]
 

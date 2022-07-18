@@ -19,7 +19,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"      
     environment:
-      DATABASE_URL: mysql://vynckier:vynckier@192.168.10.14/drupal_erpdata
+      DATABASE_URL: mysql://dawson:@root123@172.20.59.120/drupal_erpdata
       XDEBUG_MODE: debug,develop,profile
       XDEBUG_CONFIG: idekey=root client_port=9000 start_with_request=yes client_host=host.docker.internal
       XDEBUG_TRIGGER: trigger
